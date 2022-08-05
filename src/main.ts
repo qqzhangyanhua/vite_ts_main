@@ -1,0 +1,10 @@
+import { createApp } from "vue";
+import "./style.css";
+import App from "./App.vue";
+import "ant-design-vue/dist/antd.less";
+import { registerGlobComp } from "@/components/registerGlobComp";
+import "virtual:windi.css";
+import router from "./router/router";
+const app = createApp(App);
+registerGlobComp(app);
+app.use(router).mount("#app");
